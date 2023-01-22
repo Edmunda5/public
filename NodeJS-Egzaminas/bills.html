@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bills</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <h2 class="title">Bills</h2>
+    <ul id="bills-list"></ul>
+
+    <div>
+      <form id="bill-add-form">
+        <input
+          id="bill-description"
+          type="text"
+          name="description"
+          placeholder="Enter description"
+        />
+        <input
+          id="bill-amount"
+          type="text"
+          name="amount"
+          placeholder="Enter amount"
+        />
+        <input id="bill-submit" type="submit" value="Add" />
+      </form>
+    </div>
+
+    <script src="../bills.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: #34495e;
+      }
+      .title {
+        text-align: center;
+      }
+      /* create nice style */
+      #bills-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      #bills-list li {
+        background-color: #f1f1f1;
+        border: 1px solid #555;
+        display: inline-block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+        min-width: 150px;
+      }
+      #bills-list li:hover {
+        background-color: #555;
+        color: white;
+      }
+
+      /* create NICE form style */
+
+      #bill-add-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #bill-add-form input {
+        margin: 5px;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Groups</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <h1 class="title">Groups</h1>
+    <div>
+      <form id="group-create-form">
+        <input
+          id="group-name"
+          type="text"
+          name="name"
+          placeholder="Enter group name"
+        />
+        <input id="group-submit" type="submit" value="Create" />
+      </form>
+      <form id="join-group-form">
+        <select name="group-id" id="group-id"></select>
+        <input id="join-submit" type="submit" value="Join" />
+      </form>
+      <div id="error-msg"></div>
+    </div>
+    <div id="groups-list"></div>
+    <script src="./groups.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: #34495e;
+      }
+      h1 {
+        text-align: center;
+        color: #fff;
+        padding: 20px;
+      }
+      #group-create-form {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+      }
+      #group-name {
+        width: 200px;
+        height: 30px;
+        margin-right: 10px;
+      }
+      #group-submit {
+        width: 100px;
+        height: 30px;
+      }
+      #join-group-form {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+      }
+      #group-id {
+        width: 200px;
+        height: 30px;
+        margin-right: 10px;
+      }
+      #join-submit {
+        width: 100px;
+        height: 30px;
+      }
+      #error-msg {
+        color: red;
+        text-align: center;
+      }
+      #groups-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .group {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .group-name {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .group-id {
+        text-align: center;
+        font-size: 15px;
+      }
+      .group-members {
+        text-align: center;
+        font-size: 15px;
+      }
+      .group-buttons {
+        display: flex;
+        justify-content: space-around;
+      }
+      .group-button {
+        width: 80px;
+        height: 30px;
+      }
+
+      .card {
+        width: 18rem;
+        margin: 10px;
+        background-color: rgb(52, 152, 219, 0.5);
+        border-radius: 10px;
+        color: #fff;
+      }
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .card-title {
+        text-align: center;
+        font-weight: 300;
+      }
+      .btn {
+        width: 100px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .btn-primary {
+        background-color: rgb(52, 152, 219, 0.5);
+        border: none;
+        color: #fff;
+        margin-bottom: 10px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+    </style>
+  </body>
+</html>
